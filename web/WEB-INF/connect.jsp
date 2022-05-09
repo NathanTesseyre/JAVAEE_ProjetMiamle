@@ -23,11 +23,12 @@
                     <div>
                         <label>Votre pseudo</label>
                         <input type="text" id="" name="" value="">
-                        <span></span>
+                        <span class="error">${requestScope.errors.pseudo}</span>
                     </div>
                     <div>
                         <label>Votre mot de passe</label>
                         <input type="password" id="" name="">
+                        <span class="error">${requestScope.errors.pwd}</span>
                     </div>  
                     <div>
                         <input type="submit" value="Se connecter">
