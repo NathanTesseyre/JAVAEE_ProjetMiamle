@@ -74,7 +74,9 @@ public class Register extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+         getServletContext()
+                .getRequestDispatcher("/WEB-INF/register.jsp")
+                .forward(request, response);
     }
 
     /**

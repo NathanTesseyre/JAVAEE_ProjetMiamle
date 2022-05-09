@@ -12,6 +12,43 @@
         <title>register JSP</title>
     </head>
     <body>
-        <h1>Hello register page!</h1>
+        <%@include file="./jspf/header.jspf" %>
+        <c:forEach var="message" items="${requestScope.registerMessage}">
+            <div class="${message.key}"><c:out value="${message.value}"/></div>
+        </c:forEach>
+        <main>
+            <fieldset>
+                <legend>Inscription</legend>
+                <div>
+                    <label for="">Votre psuedo</label>
+                    <input type="text" id="" name="" value="">
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="">Votre email</label>
+                    <input type="text" id="" name="" value="">
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="">Votre téléphone</label>
+                    <input type="text" id="" name="" value="">
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="">Votre mot de passe</label>
+                    <input type="password" id="" name="">
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="confirm">Confirmation</label>
+                    <input type="password" id="" name="confirm">
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <input type="submit" value="S'inscrire">
+                </div>
+            </fieldset>
+        </main>
+        <%@include file="./jspf/footer.jspf" %>
     </body>
 </html>

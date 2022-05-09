@@ -35,5 +35,6 @@
                 </form>
             </fieldset>
         </main>
+            <%@include file="./jspf/footer.jspf" %>
     </body>
 </html>
