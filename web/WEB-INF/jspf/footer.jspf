@@ -3,4 +3,9 @@
 
 <footer>
     <div>Générée par Java JEE - &copy; le meilleur groupe pour le meilleur des projets</div>
+    <div>
+        <c:if test="${!empty sessionScope.user}">
+            Vous êtes connecté avec l'adresse courriel ${sessionScope.user.email}
+        </c:if>
+    </div>
 </footer>
