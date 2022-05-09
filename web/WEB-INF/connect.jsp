@@ -22,12 +22,12 @@
                 <form action="" method="post">
                     <div>
                         <label>Votre pseudo</label>
-                        <input type="text" id="" name="" value="">
+                        <input type="text" id="pseudo" name="pseudo">
                         <span class="error">${requestScope.errors.pseudo}</span>
                     </div>
                     <div>
                         <label>Votre mot de passe</label>
-                        <input type="password" id="" name="">
+                        <input type="password" id="pwd" name="pwd">
                         <span class="error">${requestScope.errors.pwd}</span>
                     </div>  
                     <div>

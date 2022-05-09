@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package forms;
 
 
@@ -63,28 +58,28 @@ public class ConnectFormCheker extends FormChecker {
 
         // Vérification de l'existence de l'utilisateur en DB et établissement
         // du message d'erreur
-        /*
+        
         if (errors.isEmpty()) {
-            String message;
-            User fromDb = DAOFactory.getUserDAO().find(user.getPseudo());
-            if (fromDb == null || !fromDb.getPwd().equals(user.getPwd())) {
-                // Si l'utilisateur n'existe pas ou qu'il existe mais que le mot
-                // de passe est faux => mesage d'erreur et invalidation de la
-                // session
-                msgMap.put("error", "Couple pseudo/mot de passe inconnu");
-                request.getSession().invalidate();
-            } else {
-                // On réucpère l'utilisateur "complet" à partir de la DB
-                user = fromDb;
-                // On le met en session
-                request.getSession().setAttribute("user", user);
-                // On met un message d'information
-                msgMap.put("valid", "Vous êtes maintenant connecté.");
-            }
+//            String message;
+//            User fromDb = DAOFactory.getUserDAO().find(user.getPseudo());
+//            if (fromDb == null || !fromDb.getPwd().equals(user.getPwd())) {
+//                // Si l'utilisateur n'existe pas ou qu'il existe mais que le mot
+//                // de passe est faux => mesage d'erreur et invalidation de la
+//                // session
+//                msgMap.put("error", "Couple pseudo/mot de passe inconnu");
+//                request.getSession().invalidate();
+//            } else {
+//                // On réucpère l'utilisateur "complet" à partir de la DB
+//                user = fromDb;
+//                // On le met en session
+//                request.getSession().setAttribute("user", user);
+//                // On met un message d'information
+//                msgMap.put("valid", "Vous êtes maintenant connecté.");
+//            }
         } else {
             msgMap.put("error", "Votre formulaire comporte des erreurs");
         }
-        */
+        
 
         // Ajout du dictionnaire de messages à la requête
         request.setAttribute("connectMessage", msgMap);

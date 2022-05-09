@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package servlet;
 
+import beans.User;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -74,6 +70,9 @@ public class Connect extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //ConnectFormChecker checker = new ConnectFormChecker(request);
+        forms.ConnectFormCheker checker = new forms.ConnectFormCheker(request);
+        User user = checker.check();
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/connect.jsp")
                 .forward(request, response);
