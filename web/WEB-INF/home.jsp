@@ -12,6 +12,13 @@
         <title>home JSP</title>
     </head>
     <body>
-        <h1>Projet de Groupe 3</h1>
+        <%@include file="./jspf/header.jspf" %>
+        <c:forEach var="message" items="${requestScope.registerMessage}">
+            <div class="${message.key}"><c:out value="${message.value}"/></div>
+        </c:forEach>
+        <main>
+            <h1>Projet de Groupe 3</h1>
+        </main>
+            <%@include file="./jspf/footer.jspf" %>
     </body>
 </html>
