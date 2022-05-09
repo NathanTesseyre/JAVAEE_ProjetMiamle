@@ -5,7 +5,7 @@
 <header>
     <h1>Bienvenue sur le projet Miamle !</h1>
     <ul>
-        <li><a href="<c:url value='/'/>">Accueil</a></li>
+        <li><a href="<c:url value='/home'/>">Accueil</a></li>
         
         <c:choose>
             <c:when test="${empty sessionScope.user}">

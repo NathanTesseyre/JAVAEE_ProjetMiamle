@@ -12,6 +12,8 @@
         <title>home JSP</title>
     </head>
     <body>
+        <%@include file="./jspf/header.jspf" %>
         <h1>Projet de Groupe 3</h1>
+        <%@include file="./jspf/footer.jspf" %>
     </body>
 </html>
