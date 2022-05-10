@@ -2,8 +2,6 @@ package forms;
 
 import beans.User;
 import dao.DAOFactory;
-import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -67,7 +65,7 @@ public class ConnectFormCheker extends FormChecker {
                 // On met un message d'information
             }
         }
-        
+
         // Ajouter la collection d'erreurs à la requête
         request.setAttribute("errors", errors);
 

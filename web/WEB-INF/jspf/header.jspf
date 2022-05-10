@@ -6,19 +6,17 @@
     <h1>Bienvenue sur le projet Miamle !</h1>
     <ul>
         <li><a href="<c:url value='/'/>">Accueil</a></li>
-        
+
         <c:choose>
             <c:when test="${empty sessionScope.user}">
                 <li><a href="<c:url value='/connect'/>">Se connecter</a></li>
                 <li><a href="<c:url value='/register'/>">S'inscrire</a></li>
-            </c:when>
-            <c:otherwise>
+                </c:when>
+                <c:otherwise>
                 <li><a href="<c:url value='/profil'/>">Profil</a></li>
                 <li><a href="<c:url value='/logout'/>">Déconnexion</a></li>
-            </c:otherwise>
-                
-            
-        </c:choose>
-        
+                </c:otherwise>
+            </c:choose>
+
     </ul>
 </header>

@@ -2,7 +2,6 @@ package servlet;
 
 import beans.User;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -46,12 +45,12 @@ public class Connect extends HttpServlet {
         //ConnectFormChecker checker = new ConnectFormChecker(request);
         forms.ConnectFormCheker checker = new forms.ConnectFormCheker(request);
         User user = checker.check();
-        if (checker.getErrors().isEmpty()){
+        if (checker.getErrors().isEmpty()) {
             response.sendRedirect(request.getContextPath() + "/");
-        } else{
-        getServletContext()
-                .getRequestDispatcher("/WEB-INF/connect.jsp")
-                .forward(request, response);
+        } else {
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/connect.jsp")
+                    .forward(request, response);
         }
     }
 
@@ -62,7 +61,7 @@ public class Connect extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "Page de connection";
     }// </editor-fold>
 
 }

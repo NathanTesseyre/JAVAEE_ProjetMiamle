@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
  */
 public abstract class FormChecker {
 
-
     protected HttpServletRequest request;
     protected HashMap<String, String> errors;
 
@@ -88,5 +87,3 @@ public abstract class FormChecker {
     }
 
 }
-
-
