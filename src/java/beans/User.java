@@ -1,12 +1,13 @@
 package beans;
 
+import dao.Identifiable;
 import java.io.Serializable;
 
 /**
  *
  * @author Herbert Caffarel
  */
-public class User implements Serializable {
+public class User implements Serializable, Identifiable {
 
     private static final long serialVersionUID = 2L;
 

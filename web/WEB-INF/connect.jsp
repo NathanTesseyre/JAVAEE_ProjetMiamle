@@ -13,9 +13,9 @@
     </head>
     <body>
         <%@include file="./jspf/header.jspf" %>
-        <c:forEach var="message" items="${requestScope.connectMessage}">
-            <div class="${message.key}"><c:out value="${message.value}"/></div>
-        </c:forEach>
+        <c:if test="${empty requestScope.errors.pseudo && empty requestScope.errors.pwd}">
+            <div class="error"><c:out value="${requestScope.errors.connection}"/></div>
+        </c:if>
         <main>
             <fieldset>
                 <legend>Se connecter</legend>

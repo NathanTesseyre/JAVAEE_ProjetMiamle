@@ -5,6 +5,7 @@
  */
 package servlet;
 
+import static dao.MySQLConnection.getConnection;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author stag
  */
-@WebServlet(name = "Home", urlPatterns = {"/home"})
+@WebServlet(name = "Home", urlPatterns = {"/"})
 public class Home extends HttpServlet {
 
     /**
